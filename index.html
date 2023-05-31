@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- bootsrap link for design -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" >
+  </head>
+  <body>
+    <!-- Title of the system -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="alert alert-primary text-center">
+                    BIO-DATA
+                </h1>
+            </div>
+             <!-- form design -->
+            <div class="col-lg-4">
+                <div class="card">
+                    <div class="card-body">
+
+                        <form id="form">
+                            <input type="hidden" name="id" id="inputBookId">
+                            <label for="inputBookTitle">Full Name</label>
+                            <input type="text" placeholder="Enter Full Name" class="form-control" id="inputBookTitle" required="Please Fill Out info">
+                            <br>
+                            <label for="inputBookAuthor">Address</label>
+                            <input type="text" placeholder="Enter Your Address" class="form-control" id="inputBookAuthor" required="Please Fill Out info">
+                            <br>
+                            <label for="inputBookYear">Birth Date</label>
+                            <input type="number" placeholder="Enter Your Birth Date" class="form-control" id="inputBookYear" required="Please Fill Out info">
+                            <br>
+                            <label for="inputBookYear">Age</label>
+                            <input type="number" placeholder="Enter Your Age" class="form-control" id="inputBookAge" required="Please Fill Out info">
+                            <br>
+                            <label for="inputBookYear">Phone Number</label>
+                            <input type="number" placeholder="Enter Your Phone Number" class="form-control" id="inputBookNumber" required="Please Fill Out info">
+                            <br>
+                            <label for="inputBookYear">Religion</label>
+                            <input type="text" placeholder="Enter Your Religion" class="form-control" id="inputBookReligion" required="Please Fill Out info">
+                            <br>
+                            <label for="inputBookIsComplete">Male</label>
+                            <input id="inputBookIsComplete" type="checkbox">
+                            <br>
+                            <label for="inputBookIsComplete">Female</label>
+                            <input id="inputBookIsComplete" type="checkbox">
+                            <br>
+                            <br>
+                            <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+                            <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- table design for unread Books -->
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-body">
+                      <h2>Female</h2>
+                        <div class="table-responsive">
+                            <table id="datatable" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>Name</th>
+                                        <th>Address</th>
+                                        <th>Birth Date</th>
+                                        <th>Age</th>
+                                        <th>Phone Number</th>
+                                        <th>Religion</th>
+                                        <th>Male</th>      
+                                        <th>Edit</th>
+                                        <th>Trash</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table">
+       
+                                </tbody>
+                            </table>
+                        </div><hr>
+                        <!-- table design for read Books -->
+                        <h2>Male</h2>
+                        <div class="table-responsive">
+                          <table id="datatable" class="table table-striped">
+                              <thead>
+                                  <tr>
+                                      <th>No</th>
+                                      <th>Name</th>
+                                      <th>Address</th>
+                                      <th>Birth Date</th>
+                                      <th>Age</th>
+                                      <th>Phone Number</th>
+                                      <th>Religion</th>
+                                      <th>Female</th>
+                                      <th>Edit</th>
+                                      <th>Trash</th>
+                                  </tr>
+                              </thead>
+                              <tbody id="table2">
+     
+                              </tbody>
+                          </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- link for the design -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="Main.js"></script>
+  </body>
+</html>
